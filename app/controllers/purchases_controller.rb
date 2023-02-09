@@ -2,6 +2,9 @@ class PurchasesController < ApplicationController
   def new
   end
 
+  def index
+    @purchases = Purchase.all
+  end
   # def create
   #   # file = params[:file_upload][:file]
   #   # File.open(Rails.root.join('public', 'uploads', file.original_filename), 'wb') do |f|

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # root to: 'purchases#new'
 
   root "purchases#new"
-  resources :purchases, only: [:new, :create]
+  resources :purchases, only: [:new, :create, :index]
 end
