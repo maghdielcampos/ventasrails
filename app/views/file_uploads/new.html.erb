@@ -1,6 +1,14 @@
-<h1>Upload File</h1>
+<!--<h1>Upload File</h1>-->
 
-<%= form_with model: @file_upload, url: file_uploads_path, local: true, multipart: true do |form| %>
-  <%= form.file_field :file %>
-  <%= form.submit %>
+<%#= form_with model: @file_upload, url: file_uploads_path, local: true, multipart: true do |form| %>
+  <%#= form.file_field :file %>
+  <%#= form.submit %>
+<%# end %>
+
+
+<h1>Importar Compras</h1>
+
+<%= form_tag purchases_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
 <% end %>
