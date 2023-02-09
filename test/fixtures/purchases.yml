@@ -2,7 +2,7 @@
 
 one:
   comprador: MyString
-  descripción_del_item: MyString
+  descripcion_del_item: MyString
   precio_del_item: 9.99
   total_de_items: 1
   direccion_de_vendedor: MyString
@@ -10,7 +10,7 @@ one:
 
 two:
   comprador: MyString
-  descripción_del_item: MyString
+  descripcion_del_item: MyString
   precio_del_item: 9.99
   total_de_items: 1
   direccion_de_vendedor: MyString
