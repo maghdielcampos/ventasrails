@@ -1,4 +1,4 @@
-class FileUploadsController < ApplicationController
+class PurchasesController < ApplicationController
   def new
   end
 
@@ -20,7 +20,7 @@ class FileUploadsController < ApplicationController
   #     Purchase.create!(comprador: comprador, descripcion_del_item: descripcion_del_item, precio_del_item: precio_del_item, total_de_items: total_de_items, direccion_del_vendedor: direccion_del_vendedor, vendedor: vendedor)
   #   end
   #
-  #   redirect_to root_path, notice: "Purchases imported."
+  #   redirect_to root_path, notice: "purchases imported."
   # end
   def create
     file = params[:file]
@@ -28,9 +28,9 @@ class FileUploadsController < ApplicationController
     header = spreadsheet.row(1)
     (2..spreadsheet.last_row).each do |i|
       row = Hash[[header, spreadsheet.row(i)].transpose]
-      Purchase.create!(comprador: row["Cliente"], descripción_del_ítem: row["Descripción del Producto"], precio_del_ítem: row["Precio por pieza"], total_de_ítems: row["Numero de piezas"], dirección_de_vendedor: row["Diección del vendedor"], vendedor: row["Nombre del Vendedor"])
+      Purchase.create!(comprador: row["Cliente"], descripcion_del_item: row["Descripción del Producto"], precio_del_item: row["Precio por pieza"], total_de_items: row["Numero de piezas"], direccion_de_vendedor: row["Diección del vendedor"], vendedor: row["Nombre del Vendedor"])
     end
-    redirect_to root_path, notice: "Purchases imported."
+    redirect_to root_path, notice: "purchases imported."
   end
 end
 

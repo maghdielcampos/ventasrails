@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  # get 'file_uploads/new'
-  # get 'file_uploads/create'
+  # get 'purchases/new'
+  # get 'purchases/create'
   #
-  # resources :file_uploads, only: [:new, :create]
-  # root to: 'file_uploads#new'
+  # resources :purchases, only: [:new, :create]
+  # root to: 'purchases#new'
 
   root "purchases#new"
   resources :purchases, only: [:new, :create]
