@@ -1,14 +1,9 @@
-<!--<h1>Upload File</h1>-->
-
-<%#= form_with model: @file_upload, url: file_uploads_path, local: true, multipart: true do |form| %>
-  <%#= form.file_field :file %>
-  <%#= form.submit %>
-<%# end %>
-
-
-<h1>Importar Compras</h1>
-
-<%= form_tag purchases_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+<div class="container mt-3">
+  <h1>Suba el archivo excel:</h1>
+  <div>
+    <%= form_tag purchases_path, class: "form-label", multipart: true do %>
+      <%= file_field_tag :file, class: "form-control form-control-sm" %>
+      <%= submit_tag "Guardar", class: "btn btn-primary mt-2" %>
+    <% end %>
+  </div>
+</div>
