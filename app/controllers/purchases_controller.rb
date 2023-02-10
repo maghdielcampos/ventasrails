@@ -8,6 +8,13 @@ class PurchasesController < ApplicationController
     @purchases.each do |purchase|
       @total += purchase.precio_del_item * purchase.total_de_items
     end
+    if @total >= 1000000
+      @total = (@total / 1000000.0).round(2), " millones"
+    elsif @total >= 1000
+      @total = (@total / 1000.0).round(2), " miles"
+    else
+      @total = @total.round(2)
+    end
 
   end
 
