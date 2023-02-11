@@ -1,31 +1,29 @@
-<div class="container mt-3">
-  <h1>Lista de Compras</h1>
+<h1>Lista de Compras</h1>
 
-  <div class="alert alert-success" role="alert">
-    <h2>Total de ingresos: $ <%= @total %></h2>
-  </div>
-  <table class="table table-light table-striped">
-    <thead>
-    <tr>
-      <th>Comprador</th>
-      <th>Descripcion del item</th>
-      <th>Precio del item</th>
-      <th>Total de items</th>
-      <th>Direccion de vendedor</th>
-      <th>Vendedor</th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @purchases.each do |purchase| %>
-      <tr>
-        <td><%= purchase.comprador %></td>
-        <td><%= purchase.descripcion_del_item %></td>
-        <td><%= purchase.precio_del_item %></td>
-        <td><%= purchase.total_de_items %></td>
-        <td><%= purchase.direccion_de_vendedor %></td>
-        <td><%= purchase.vendedor %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
+<div class="alert alert-success" role="alert">
+  <h2>Total de ingresos: <%= number_to_currency(@total) %></h2>
 </div>
+<table class="table table-light table-striped">
+  <thead>
+  <tr>
+    <th>Comprador</th>
+    <th>Descripcion del item</th>
+    <th>Precio del item</th>
+    <th>Total de items</th>
+    <th>Direccion de vendedor</th>
+    <th>Vendedor</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @purchases.each do |purchase| %>
+    <tr>
+      <td><%= purchase.comprador %></td>
+      <td><%= purchase.descripcion_del_item %></td>
+      <td><%= purchase.precio_del_item %></td>
+      <td><%= purchase.total_de_items %></td>
+      <td><%= purchase.direccion_de_vendedor %></td>
+      <td><%= purchase.vendedor %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
