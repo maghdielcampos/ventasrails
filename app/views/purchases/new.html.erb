@@ -1,0 +1,10 @@
+<h1>Suba el archivo excel:</h1>
+<div>
+  <%= form_tag purchases_path, class: "form-label", multipart: true do %>
+    <%= file_field_tag :file, id: "validationFile", class: "form-control form-control-sm", accept: ".csv, .xlsx", required: true %>
+    <div id="validationFileFeedback" class="invalid-feedback">
+      Por favor seleccione un archivo excel.
+    </div>
+    <%= submit_tag "Guardar", class: "btn btn-primary mt-2" %>
+  <% end %>
+</div>

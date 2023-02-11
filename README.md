@@ -1,24 +1,17 @@
 # README
+Este aplicativo se desarrollo en las siguientes versiones de Ruby & Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 3.2.0
+* Rails 7.0.4.2
 
-Things you may want to cover:
+# Recuerde tener la última version actualizada de la rama "main" utilizando git pull
 
-* Ruby version
-
-* System dependencies
-
+* Se requiere tener instalado la gema roo o instalara de la siguiente forma
+  gem install roo y agregar la siguiente línea a del archivo Gemfile:  gem 'roo'
 * Configuration
 
-* Database creation
+* Se requiere ejecutar los siguentes comandos para tener la bdd sqlite
+  rake db:create
+  rake db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Instruccion final: disfrute de la aplicación

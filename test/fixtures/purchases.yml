@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comprador: MyString
+  descripcion_del_item: MyString
+  precio_del_item: 9.99
+  total_de_items: 1
+  direccion_de_vendedor: MyString
+  vendedor: MyString
+
+two:
+  comprador: MyString
+  descripcion_del_item: MyString
+  precio_del_item: 9.99
+  total_de_items: 1
+  direccion_de_vendedor: MyString
+  vendedor: MyString

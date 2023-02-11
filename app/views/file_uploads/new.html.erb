@@ -1,6 +1,0 @@
-<h1>Upload File</h1>
-
-<%= form_with model: @file_upload, url: file_uploads_path, local: true, multipart: true do |form| %>
-  <%= form.file_field :file %>
-  <%= form.submit %>
-<% end %>
